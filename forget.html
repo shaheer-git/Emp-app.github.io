@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="header">
+        <img src="https://cdn-icons-png.flaticon.com/128/2436/2436702.png" alt="" srcset="" id="img">
+        <h3>EmpBook</h3>
+        
+    </div>
+    <div class="container">
+        <div id="forget-pass-card" >
+            <form id="forget-pass-form" method="post">
+                <h3>Change Password</h3>
+                <div class="label-div" style="margin-top: 10px;">
+                    <label for="phone-number">Registered Phone Number</label>
+                </div>
+                <input type="tel" name="phone-number" id="phone-number">
+                <div class="label-div">
+                    <label for="password">New Password</label>
+                </div>
+                <input type="password" name="password" id="forget-card-password">
+                <div class="label-div">
+                    <label for="repeat-password">Repeat Password</label>
+                </div>
+                <input type="password" name="repeat-password" id="forget-card-repeat-password">
+                <button type="submit">Change password</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <p>@2023 EmpBook All rights reserved</p>
+    </div>
+</body>
+<script>
+   let phonenumber = document.getElementById('phone-number');
+   let form = document.getElementById('forget-pass-form');
+   let newPassword = document.getElementById('forget-card-repeat-password'); 
+   function changePassword(){
+    debugger;
+    let decodePassword = atob(localStorage.getItem('phonenumber'));
+    let encodePassword;
+    if(decodePassword==phonenumber.value){
+        localStorage.removeItem('password');
+        encodePassword = btoa(newPassword.value);
+        localStorage.setItem('password',encodePassword);
+        location.href='index.html'
+    }else{
+        alert('phone number is not matching')
+    }
+   }
+   form.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    changePassword();
+   })
+</script>
+</html>

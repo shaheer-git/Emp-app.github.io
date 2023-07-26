@@ -1,0 +1,198 @@
+.header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+button {
+    height: 30px;
+    margin: 10px;
+    border-radius: 20px;
+    outline: none;
+    border-style: none;
+    background-color: #4d4de7;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6a6abe;
+}
+
+#show-table {
+    color: teal;
+    cursor: pointer;
+}
+
+#img {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+}
+
+#img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#p {
+    margin-left: auto;
+}
+
+.container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+table,
+thead,
+tbody {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: black;
+    color: white;
+}
+
+td {
+    padding: 20px;
+}
+
+.table-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin-top: 50px;
+}
+
+table {
+    width: auto;
+    height: auto;
+    font-size: large;
+    margin: 2px;
+}
+
+.dropDowm-responsive-div {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.emp-name {
+    width: 800px;
+    background-color: black;
+    color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 4px;
+    transition: 1s;
+
+}
+
+.emp-details {
+    width: 800px;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 4px;
+    display: none;
+    transition: 1ms;
+
+}
+
+@media screen and (max-width: 950px) {
+    .dropDowm-responsive-div {
+        display: flex;
+
+    }
+    .table-div {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width: 800px) {
+    .emp-name {
+        width: 600px;
+    }
+
+    .emp-details {
+        width: 600px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .emp-name {
+        width: 400px;
+
+    }
+
+    .emp-details {
+        width: 400px;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+    .emp-name {
+        width: 230px;
+    }
+
+    .emp-details {
+        width: 230px;
+    }
+
+}
+.emp-name-details{
+    background-color: white;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card {
+    width: 100%;
+    height: 150px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

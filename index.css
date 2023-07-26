@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+#alert-msg-sucess {
+    width: 100%;
+    height: 30px;
+    background-color: #90EE90;
+    color: black;
+    position: sticky;
+    top: 70px;
+}
+#alert-msg-fail{
+    width: 100%;
+    height: 30px;
+    background-color: red;
+    color: black;
+    position: sticky;
+    top: 70px;
+}
+
+#msg, #msg-fail {
+    padding-top: 7px;
+    text-align: center;
+    opacity: 0.8;
+
+}
+#ac-not-found{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(197, 36, 36);
+    color: black;
+    position: sticky;
+    top: 70px;
+}
+
+#img {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+}
+
+#img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#p {
+    margin-left: auto;
+}
+
+.container {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#login-card {
+    width: auto;
+    height: auto;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid;
+    border-color: #514f4f80;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#signup-card {
+    width: auto;
+    height: auto;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid;
+    border-color: #514f4f80;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#signup-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#forget-pass-card {
+    width: auto;
+    height: auto;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid;
+    border-color: #514f4f80;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#forget-pass-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+input{
+    height: 30px;
+    width: 100%;
+    margin: 10px;
+    border-style: double;
+    border-radius: 20px;
+    border-color: #514f4f66;
+    outline: none;
+    padding-left: 10px;
+}
+a{
+    color: #20207c;
+    cursor: pointer;
+    text-decoration: none;
+}
+button{
+    height: 30px;
+    width: 100%;
+    margin: 10px;
+    border-radius: 20px;
+    outline: none;
+    border-style: none;
+    background-color: #4d4de7;
+    color: white;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #6a6abe;
+}
+.label-div{
+    margin-right: auto;
+}
+.forget-anchor-div{
+    margin-left: auto;
+}
+
+.footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}

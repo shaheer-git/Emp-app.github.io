@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <div class="header">
+        <img src="https://cdn-icons-png.flaticon.com/128/2436/2436702.png" alt="" srcset="" id="img">
+        <h3>EmpBook</h3>
+
+        <p id="p">
+            <button onclick="logout()" style="margin-left: 10px;">Logout</button>
+        <p id="dark" onclick="dark()">Dark Mode<img src="https://cdn-icons-png.flaticon.com/512/1687/1687737.png" alt=""
+                srcset="" id="img"></p>
+        <p id="light" onclick="light()" style="display: none;">Light Mode<img
+                src="https://cdn-icons-png.flaticon.com/512/1687/1687686.png" alt="" srcset="" id="img"></p>
+        </p>
+    </div>
+    <div class="container">
+        <h1>
+            Hi, there!
+        </h1>
+        <h1>
+            Welcome to EmpBook!
+        </h1>
+        <div class="card-container">
+            <div class="card" id="card-view-table">
+                <p>
+                    Click below to see the Employee Details
+                </p>
+                <button onclick="gotoTableDiv()">View Details</button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="footer">
+        <p>@2023 EmpBook All rights reserved</p>
+    </div>
+</body>
+<script>
+    if (!sessionStorage.getItem('username')) {
+        location.href='index.html'
+    }
+    function delStorage() {
+    let bool = confirm("Do yo really want to logout");
+    
+    if (bool) {
+        location.href='index.html'
+        sessionStorage.clear();
+    }
+}
+logout= ()=>{
+    // console.log(confirm("Do yo really want to logout"))
+       delStorage();
+}
+    if (localStorage.getItem('darkTheme') == "dark") {
+        document.body.style.backgroundColor = "black"
+        document.body.style.color = "white"
+        document.getElementById('light').style.display = "block"
+        document.getElementById('dark').style.display = "none"
+        localStorage.setItem('darkTheme', 'dark');
+        localStorage.removeItem('lightTheme')
+
+    } else {
+        document.body.style.backgroundColor = "white"
+        document.body.style.color = "black"
+        document.getElementById('light').style.display = "none"
+        document.getElementById('dark').style.display = "block"
+        localStorage.setItem('lightTheme', 'light');
+        localStorage.removeItem('darkTheme')
+    }
+    gotoTableDiv = () => {
+        location.href = 'table.html'
+    }
+
+</script>
+<script src="common.js"></script>
+
+</html>
