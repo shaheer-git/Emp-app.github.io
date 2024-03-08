@@ -11,6 +11,10 @@
 //     document.getElementById('light').style.display = "none"
 //     document.getElementById('dark').style.display = "block"
 // }
+addEventListener('load', ()=>{
+    debugger;
+    
+})
 let decodePassword;
 let decodeUsername;
 if(localStorage.getItem('username')){
